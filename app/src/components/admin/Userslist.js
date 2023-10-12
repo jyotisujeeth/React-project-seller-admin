@@ -1,11 +1,12 @@
 import React from "react";
-import card from "../UI/Card";
+import Card from "../UI/Card";
 
 const Admin = props => {
 return (
-  <Card className={classes.product}>
+  <Card className={classes=.product}>
+    
     <ul>
-      {props.users.map((user) => {
+      {props.product.map((user) => {
         <li key={user.id}>
           {Admin.Product} ({Admin.Price} totalValue)
         </li>;

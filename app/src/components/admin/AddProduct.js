@@ -2,8 +2,7 @@ import React, { useState }from "react";
 import Button from '../Button';
 import classes from './AddProduct.module.css';
 import Card from "../UI/Card";
-
-import ErrorModal from "../UI/errorModal";
+import ErrorModal from "./UI/errorModal";
 
 const AddProduct = (props) => {
   const [enteredProduct, setEnteredProduct] = useState("");
@@ -35,7 +34,7 @@ const AddProduct = (props) => {
   };
 
   const ProductChangeHandler = (event) => {
-    setEnteredProducte(event.target.value);
+    setEnteredProduct(event.target.value);
   };
 
   const PriceChangeHandler = (event) => {
@@ -62,7 +61,7 @@ const AddProduct = (props) => {
           <input
             id="Product"
             type=" text"
-            value={enteredProducte}
+            value={enteredProduct}
             onChange={ProductChangeHandler}
           ></input>
           <label htmlFor="price">Price</label>

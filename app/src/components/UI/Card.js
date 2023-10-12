@@ -1,7 +1,7 @@
 import React from "react";
 
 
-import calsses from '.\Card.module.css';
+import classes from './Card.module.css';
 const Card = (props) => {
 return
 

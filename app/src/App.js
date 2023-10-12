@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 import AddProduct from "../components/Admin/AddProduct";
-import Admin from "./components/AdminUserslist";
+import  Admin from "../components/Admin/Userslist";
 
 function App() {
   const [ProductList, setProductList] = useState([]);
 
-  const addUserHandler = (PProduct, PPrice) => {
+  const addProductHandler = (PProduct, PPrice) => {
     setProductList((prevProductList) => {
       return [
         ...prevProductList,
@@ -16,7 +16,7 @@ function App() {
   };
   return (
     <div>
-      <AddProduct onAddUser={addProductHandler} />
+      <AddProduct onAddProduct={addProductHandler} />
       <ProductList Product={[]} />
     </div>
   );

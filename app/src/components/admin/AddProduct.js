@@ -1,7 +1,9 @@
 import React, { useState }from "react";
 import Button from '../Button';
 import classes from './AddProduct.module.css';
+import Card from "../UI/Card";
 
+import ErrorModal from "../UI/errorModal";
 
 const AddProduct = (props) => {
   const [enteredProduct, setEnteredProduct] = useState("");
@@ -54,7 +56,7 @@ const AddProduct = (props) => {
           onCofirm={errorHandler}
         />
       )}
-      
+      <Card className={classes.input}>
         <form onSubmit={addProductHandler}>
           <label htmlFor="Product"> Product</label>
           <input
@@ -72,7 +74,7 @@ const AddProduct = (props) => {
           ></input>
           <Button type="submit">Product</Button>
         </form>
-     
+      </Card>
       {/* </ErrorModal> */}
     </div>
   );
